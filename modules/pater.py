@@ -79,7 +79,7 @@ def make_logo(first, last, img, colour, fnt):
     lasts = [last]
   
   hei = (img.height/2) - 200
-  draw.multiline_text((wid, hef), "\n".join(x for x in firsts), fill=colour, font=Font, align="center")
+  draw.multiline_text((wid, hei), "\n".join(x for x in firsts), fill=colour, font=Font, align="center")
   draw.multiline_text(((img.width - (wid*2 + 100*(int(len(lasts)))))/2, (hei + (350*int(len(firsts))))), "\n".join(y for y in lasts), fill=colour, font=Font, align="center")
   namae = "logo.png"
   img.save(namae)
