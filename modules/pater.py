@@ -7,16 +7,14 @@ from urllib.request import urlopen
 
 CONG = os.path.join(os.getcwd(), "config.json")
 
-with open(CONG, "r") as data:
-  d = json.load(data)
-  
+
 def get_word():
   s = ["asthetic", "anime", "abstract", "dark", "black"]
   return random.choice(s)
 
 def get_bg():
   word = get_word()
-  r = requests.get(f"{d['bg_api']}/wall/{word}")
+  r = requests.get(f"https://testapibots1.herokuapp.com/wall/{word}")
   resp = r.json()
   resp = get_working(resp["images"])
   bg = random.choice(resp)
