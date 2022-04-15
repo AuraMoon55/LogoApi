@@ -1,16 +1,15 @@
 from fastapi import FastAPI, Request
 from modules import *
-import json
 from fastapi.responses import FileResponse
 import os
 
 CONG = os.path.join(os.getcwd(), "config.json")
 
 app = FastAPI()
-
+"""
 with open(CONG, "r") as data:
   d = json.load(data)
-
+"""
 
 @app.get("/")
 async def home():
@@ -18,8 +17,8 @@ async def home():
       "Name": "Logo Api",
       "Version": "Test",
       "Status": "Up",
-      "Help": f"{d['name']}/help",
-      "Authors": f"{d['authors']}"
+      "Help": "https://testlogoapi.herokuapp.com//help",
+      "Authors": "AuraMoon55"
     }
 
 @app.get("/help")
@@ -28,8 +27,8 @@ async def get_help():
   fe = "name for second line"
   return {
     "Name": "Logo Api",
-    "get_logo": f"{d['name']}/logo?first={fn}&?last={fe}",
-    "Authors": f"{d['authors']}"
+    "get_logo": f"https://testlogoapi.herokuapp.com//logo?first={fn}&?last={fe}",
+    "Authors": "AuraMoon55"
   }
 
 @app.get("/logo")
