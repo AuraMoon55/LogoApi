@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from modules import *
 import json
 from fastapi.responses import FileResponse
-
+import os
 
 CONG = os.path.join(os.getcwd(), "config.json")
 
