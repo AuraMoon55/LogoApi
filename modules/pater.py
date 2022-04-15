@@ -53,7 +53,6 @@ def get_colour():
 
 
 def make_logo(first, img, colour, fnt):
-  os.remove("logo.png")
   img = Image.open(img)
   fs = 250
   minwid = int(str(img.width/50).split(".")[0])
