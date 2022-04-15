@@ -41,8 +41,9 @@ def rem_perso(images: list):
   return True
 
 def randfont():
-  fonts = glob.glob("fonts" + "/*.ttf")
+  fonts = [1,2,3,4,5,6,7]
   font = random.choice(fonts)
+  font = f"fonts/LoneGhoul-{}.ttf"
   return font
 
 def get_colour(): 
@@ -51,7 +52,7 @@ def get_colour():
   return colo
 
 
-def make_logo(first img, colour, fnt):
+def make_logo(first, img, colour, fnt):
   os.remove("logo.png")
   img = Image.open(img)
   fs = 250
