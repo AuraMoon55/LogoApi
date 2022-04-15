@@ -43,7 +43,7 @@ def rem_perso(images: list):
 def randfont():
   fonts = [1,2,3,4,5,6,7]
   font = random.choice(fonts)
-  font = f"fonts/LoneGhoul-{}.ttf"
+  font = f"fonts/LoneGhoul-{font}.ttf"
   return font
 
 def get_colour(): 
