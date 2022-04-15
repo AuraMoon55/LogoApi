@@ -3,4 +3,4 @@ gunicorn
 uvicorn
 requests
 pillow
-
+telegraph 
