@@ -31,11 +31,10 @@ async def get_help():
     "Authors": "AuraMoon55"
   }
 
-@app.get("/logo")
-async def logo_p(request: Request):
-  params = request.query_params
-  first = params["first"]
-  last = params["last"]
+@app.get("/logo/first/{first_n}/last/{last_n}")
+async def logo_p(first_n, last_n):
+  first = first_n
+  last = last_n
   logo = await get_logo(first, last)
   return FileResponse(logo)
 
