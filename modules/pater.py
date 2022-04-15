@@ -59,7 +59,7 @@ def make_logo(first, last, img, colour, fnt):
   Font = ImageFont.truetype(fnt, fs)
   wid = (img.width - minwid)/10
   splits = int((img.width - (2*wid))/150)
-  if first[splits]:
+  if first[int(splits)]:
     cuts = int(str(len(first)/splits).split(".")[0])
     firsts = []
     for cut in range(cuts):
@@ -68,7 +68,7 @@ def make_logo(first, last, img, colour, fnt):
       firsts.append(first[emd:strt])
   else:
     firsts = [first]
-  if last[splits]:
+  if last[int(splits)]:
     cutsy = int(str(len(last)/splits).split(".")[0])
     lasts = []
     for cuty in range(cutsy):
