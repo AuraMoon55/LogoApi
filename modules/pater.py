@@ -51,7 +51,8 @@ def get_colour():
   return colo
 
 
-def make_logo(first, last, img, colour, fnt):
+def make_logo(first img, colour, fnt):
+  os.remove("logo.png")
   img = Image.open(img)
   fs = 250
   minwid = int(str(img.width/50).split(".")[0])
@@ -68,31 +69,19 @@ def make_logo(first, last, img, colour, fnt):
       firsts.append(first[emd:strt])
   except:
     firsts = [first]
-  try:
-    cutsy = int(str(len(last)/splits).split(".")[0])
-    lasts = []
-    for cuty in range(cutsy):
-      stry = splits*(cuty + 1)
-      emdy = splits*cuty
-      lasts.append(last[emdy:stry])
-  except:
-    lasts = [last]
   
   hei = (img.height/2) - 200
   draw.multiline_text((wid, hei), "\n".join(x for x in firsts), fill=colour, font=Font, align="center")
-  draw.multiline_text(((img.width - (wid*2 + 100*(int(len(lasts)))))/2, (hei + (350*int(len(firsts))))), "\n".join(y for y in lasts), fill=colour, font=Font, align="center")
   namae = "logo.png"
   img.save(namae)
   return namae
 
 
-async def get_logo(first, last):
+async def get_logo(first):
   first = first.replace("+", " ")
   first = first.replace("%20", " ")
-  last = last.replace("+", " ")
-  last = last.replace("%20", " ")
   backimg = get_bg()
   colour = get_colour()
   fnt = randfont()
-  logo = make_logo(first, last, backimg, colour, fnt)
+  logo = make_logo(first, backimg, colour, fnt)
   return logo
