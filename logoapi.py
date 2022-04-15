@@ -31,10 +31,9 @@ async def get_help():
     "Authors": "AuraMoon55"
   }
 
-@app.get("/logo/first/{first_n}/last/{last_n}")
-async def logo_p(first_n, last_n):
+@app.get("/logo/{first_n}")
+async def logo_p(first_n):
   first = first_n
-  last = last_n
-  logo = await get_logo(first, last)
+  logo = await get_logo(first)
   return FileResponse(logo)
 
