@@ -1,0 +1,7 @@
+flask
+asyncio
+motor
+requests
+pillow
+telegraph 
+jinja2

@@ -1,0 +1,6 @@
+{
+  "name": "https://testlogoapi.herokuapp.com",
+  "authors": ["AuraMoon55"],
+  "wall_api": "https://testapibots1.herokuapp.com/wall",
+  "mongo": ""
+}
