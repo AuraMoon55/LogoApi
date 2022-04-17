@@ -1,4 +1,7 @@
-from logoapi import db
+import asyncio
+from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
+mongo_client = MongoClient("mongodb+srv://Hirokun:hirokun_5@cluster0.kprej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+db = mongo_client.logoapi
 
 usersdb = db.users
 
