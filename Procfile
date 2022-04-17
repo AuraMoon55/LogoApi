@@ -1,1 +1,1 @@
-web: python3 -m logoapi.py
+web: python3 -m logoapi
