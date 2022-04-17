@@ -1,6 +1,7 @@
 {
   "name": "https://testlogoapi.herokuapp.com",
-  "authors": ["AuraMoon55"],
+  "authors": ["AuraMoon55", "TechShreyash"],
   "wall_api": "https://testapibots1.herokuapp.com/wall",
   "mongo": ""
+  "sqlalchemy_uri": ""
 }
