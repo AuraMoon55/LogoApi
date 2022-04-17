@@ -18,7 +18,7 @@ def get_word():
 
 def get_bg():
   word = get_word()
-  r = requests.get(f"{d['wall_api']}/{word}")
+  r = requests.get(f"https://testapibots1.herokuapp.com/wall/{word}")
   resp = r.json()
   resp = get_working(resp["images"])
   bg = random.choice(resp)
