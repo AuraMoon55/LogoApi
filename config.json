@@ -2,7 +2,7 @@
   "name": "https://testlogoapi.herokuapp.com",
   "authors": ["AuraMoon55", "TechShreyash"],
   "wall_api": "https://testapibots1.herokuapp.com/wall",
-  "mongo": "mongodb+srv://Hirokun:hirokun_5@cluster0.kprej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongo": "mongodb+srv://abc:abc@cluster0.dxxoi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   "sqlalchemy_uri": "",
   "mongo_use": true
 }
