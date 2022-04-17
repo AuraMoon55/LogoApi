@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker logoapi:app
+web: python3 -m logoapi.py
