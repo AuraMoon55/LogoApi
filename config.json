@@ -4,4 +4,5 @@
   "wall_api": "https://testapibots1.herokuapp.com/wall",
   "mongo": ""
   "sqlalchemy_uri": ""
+  "mongo_use": false
 }
