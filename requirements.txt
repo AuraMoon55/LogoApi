@@ -5,3 +5,4 @@ requests
 pillow
 telegraph 
 jinja2
+pymongo[srv]
