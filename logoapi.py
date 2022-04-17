@@ -12,6 +12,7 @@ app = Flask(__name__)
 with open(CONG, "r") as data:
   d = json.load(data)
 
+
 mongo_client = MongoClient(d['mongo'])
 db = mongo_client.logoapi
 
