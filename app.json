@@ -1,0 +1,8 @@
+{
+  "env": {
+    "heroku: {
+    "value": "true",
+    "required": true
+    }
+  }
+}
